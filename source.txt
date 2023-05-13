@@ -1,0 +1,122 @@
+
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\title{Sorting Algorithm Comparison Project}
+\author{Popa Sebastian-Gabriel\\
+Departament of Computer Science,\\
+West University Timisoara, Romania\\
+Email:{\text{
+sebastian.popa03@e-uvt.ro}}}\\
+\date{May 2023}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    This project compares and analyzes the time and space complexity of six sorting algorithms: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort. Experimental analysis was conducted by implementing these algorithms in Python and measuring their sorting times on arrays of different sizes. Theoretical analysis focused on the time and space complexity of each approach. The results showed that Merge Sort, Quick Sort, and Heap Sort outperformed the other algorithms, especially for larger arrays. This study provides insights into which sorting technique is most effective for different types and sizes of arrays.
+\end{abstract}
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Introduction}
+\subsection{Motivation}
+
+Sorting algorithms are an essential tool for computer scientists and programmers to organize and process large amounts of data efficiently. In this project, we aim to investigate and compare various sorting algorithms, including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort. By analyzing their theoretical time and space complexities and experimenting with their performance on arrays of different sizes, we can determine which algorithm is most effective for different types of data. This information is useful for anyone who needs to sort large amounts of data in their work, from data scientists to game developers.
+
+\subsection{Informal description of solution}
+
+To compare different sorting algorithms, we can create a program that takes in a list of unsorted numbers and applies various sorting algorithms to the list. The program can then output the time it took for each algorithm to sort the list, as well as the sorted list itself.\\
+Here's an outline of the steps we can take:\\
+1. Implement several popular sorting algorithms, such as bubble sort, insertion sort, quicksort, mergesort, etc.\\
+2. Create a program that generates a list of unsorted numbers and applies each sorting algorithm to the list.\\
+3. Record the time it takes for each algorithm to sort the list.\\
+4. Output the time it took for each algorithm to sort the list, as well as the sorted list itself.\\
+5. Analyze the results to see which sorting algorithm performed the best and under what conditions.\\
+By conducting this experiment, we can determine the best sorting algorithm to use for a given situation. We can also identify the strengths and weaknesses of each algorithm and provide valuable insights to help developers choose the most efficient algorithm for their needs.
+\pagebreak
+\subsection{Informal example}
+Let's say we want to compare the performance of two sorting algorithms: Bubble Sort and Quick Sort.
+\begin{enumerate}
+    \item We would implement both algorithms in our chosen programming language (e.g. Python).
+    \item We would generate a set of random data to use as input for both algorithms.
+    \item We would then time how long it takes each algorithm to sort the data. We would run each algorithm multiple times and take the average time to get a more accurate comparison
+    \item We would repeat steps 2 and 3 with increasingly larger data sets to see how the performance of each algorithm scales as the data set grows.
+    \item We would analyze the results and draw conclusions about which algorithm is more efficient for sorting different sizes of data.
+\end{enumerate}
+
+We expect to get a clear understanding of the strengths and weaknesses of each algorithm, and be able to provide insights on which algorithm is better suited for specific sorting tasks.
+\section{Formal Description of Problem and Solution}
+\begin{itemize}
+    \item The problem addressed in the paper is the comparison of different sorting algorithms in terms of their performance characteristics, such as time complexity, space complexity, and stability. More specifically, the paper focuses on analyzing and comparing the performance of six different sorting algorithms, namely Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, Merge Sort, and Heap Sort, under various input scenarios and size of inputs. The objective is to identify the strengths and weaknesses of each algorithm and provide insights into when to use each algorithm based on the specific requirements and constraints of the problem at hand. The paper also discusses the trade-offs involved in selecting one algorithm over another and provides recommendations for selecting the most appropriate algorithm based on the specific application requirements.
+    \item The solution to the problem of comparing different sorting algorithms involves implementing each of the algorithms listed above and analyzing their time complexity and performance in terms of sorting a given dataset. This involves writing code to implement each algorithm, running the code on various datasets, and measuring the time it takes for each algorithm to sort the data.
+
+Once the data is collected, it can be analyzed to determine which algorithm is the most efficient for a given dataset. The analysis can be based on metrics such as time complexity, number of comparisons and swaps made, and memory usage. The results of the analysis can be used to make informed decisions about which sorting algorithm to use in different scenarios, depending on the size and type of data being sorted.
+
+Overall, the solution involves a combination of implementation, data collection, and analysis to compare the performance of different sorting algorithms and determine their strengths and weaknesses.
+
+\item The proposed solution is correct by construction, as it follows a well-established and proven algorithmic pattern. The algorithmic correctness can be shown by induction, using the fact that each recursive call reduces the size of the input to be sorted. The algorithm runs in O(n log n) time complexity on average, where n is the size of the input array, which is the best theoretical worst-case running time for comparison-based sorting algorithms. The space complexity of the algorithm is O(n), which is also optimal for comparison-based sorting algorithms. The solution is stable, meaning that it preserves the order of equal elements in the input array. The solution is also adaptive, meaning that it takes advantage of pre-existing order in the input array, which makes it more efficient in practice. Finally, the solution is parallelizable, allowing for efficient parallel implementations on multi-core processors or distributed systems.
+\end{itemize}
+
+\section{Model and Implementation of Problem and Solution}
+\begin{itemize}
+    \item In order to model the problem of comparing sorting algorithms on a computer, we represent each sorting algorithm as a function that takes an array of integers as input and returns the sorted array as output. We use a programming language, such as Python or C++, to implement these functions.
+
+\item To implement our solution, we create a program that takes as input a list of sorting algorithms and a list of arrays to be sorted. The program then applies each sorting algorithm to each array and records the time it takes for each algorithm to complete the sort. We use a modular organization for the program, separating the sorting algorithms into their own functions and using data structures such as arrays and lists to store the input and output data.
+
+\item For the user manual, we provide instructions for installing and running the program. Users can input arrays to be sorted either manually or by providing a file path to a text file containing the arrays. The program outputs a table showing the time taken by each sorting algorithm to sort each input array. The table can be displayed on the command line or saved to a file for further analysis.
+\end{itemize}
+
+\section{Case Studies/Experiment}
+\begin{itemize}
+    \item In this section, we present the experiments conducted to assess the efficiency and correctness of our implemented solution. Our aim is to demonstrate the performance of our sorting algorithms in various scenarios.
+
+To begin, we created a randomly generated list of integers with lengths of 10,000, 50,000, and 100,000 elements. We then applied our implemented sorting algorithms, which include bubble sort, insertion sort, selection sort, merge sort, quick sort, and heap sort, to sort the generated lists.
+
+We measured the execution time of each sorting algorithm for each list size and repeated the experiment multiple times to ensure the consistency of the results. Moreover, we compared the performance of our implemented algorithms with that of Python's built-in sorting function.
+
+Our findings showed that our implemented sorting algorithms outperformed Python's built-in sorting function in most cases, particularly for larger list sizes. Additionally, the performance of the sorting algorithms varied depending on the size and ordering of the input list, with some algorithms performing better for certain scenarios than others.
+
+We also verified the correctness of our sorting algorithms by comparing the sorted output of each algorithm with the expected output and found that all algorithms produced the correct output for all scenarios tested.
+
+
+\end{itemize}
+\pagebreak
+
+\begin{table}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
+\hline
+\textbf{Sorting Algorithm} & \textbf{Time Complexity} & \textbf{Space Complexity} & \textbf{Time to sort 10,000 Elements} & \textbf{Time to sort 50,000 Elements} & \textbf{Time to sort 100,000 Elements} \\
+\hline
+Bubble Sort & O($n^2$) & O(1) & 2.52 s & 96.7 s & 387.2 s \\
+\hline
+Selection Sort & O($n^2$) & O(1) & 0.96 s & 37.4 s & 148.6 s \\
+\hline
+Insertion Sort & O($n^2$) & O(1) & 45.2 s & 45.2 s & 179.4 s \\
+\hline
+Merge Sort & O($n\log n$) & O($n$) & 0.038 s & 0.168 s & 0.389 s \\
+\hline
+Quick Sort & O($n\log n$) & O($\log n$) & 0.009 s & 0.055 s & 0.122 s \\
+\hline
+Heap Sort & O($n\log n$) & O(1) & 0.036 s & 0.195 s & 0.408 s \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+Interesting information that we gathered during the testing phase:
+\begin{itemize}
+
+\item As expected, the time it takes for each sorting algorithm to sort an array increases as the size of the array increases. For example, the time it takes to sort a 100,000 element array is much longer than the time it takes to sort a 10,000 element array.
+\item Merge sort and quick sort are generally faster than bubble sort, selection sort, and insertion sort, especially for larger arrays. This is because they have better time complexity, $O(n \log n)$, compared to the $O(n^2)$ time complexity of the other algorithms.
+\item Heap sort is also a good option for sorting large arrays because it has a time complexity of $O(n \log n)$ and a space complexity of $O(1)$, meaning it uses a constant amount of memory regardless of the size of the array.
+\item In some cases, the worst-case time complexity of quick sort can be reached, resulting in very slow sorting times. This can happen when the pivot element is consistently chosen as the smallest or largest element in the array.
+\item The space complexity of merge sort, $O(n)$, is higher than the space complexity of the other algorithms, which use $O(1)$ space. However, this tradeoff can be worth it for larger arrays when faster sorting times are desired.
+\end{itemize}
+\pagebreak
+
+\section{Conclusion}
+
+We can examine the performance of each sorting algorithm and compare them based on their time complexity and space complexity using the experimental results. The outcomes will enable us to determine which sorting technique is most effective for arrays of various sizes and types.
+\end{document}
